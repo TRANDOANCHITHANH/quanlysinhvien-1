@@ -274,3 +274,26 @@ void sapXepDanhSachSinhVienTheoDTB(SV ds[], int n){
 	}
 }
 */
+/* tran doan chi thanh
+void ChenSV(SV a[],int &n)
+{  
+    n++;
+    for (int i=n;i>0;i--)
+    {
+    	a[i].id=a[i-1].id;
+    	strcpy(a[i].ten,a[i-1].ten);
+    	strcpy(a[i].gioiTinh,a[i-1].gioiTinh);
+        a[i].diemKTLT=a[i-1].diemKTLT;
+        a[i].diemGT=a[i-1].diemGT;
+        a[i].diemXSTK=a[i-1].diemXSTK;
+        a[i].ngaySinh.ngay=a[i-1].ngaySinh.ngay;
+        a[i].ngaySinh.thang=a[i-1].ngaySinh.thang;
+        a[i].ngaySinh.nam=a[i-1].ngaySinh.nam;
+        a[i].tuoi=a[i-1].tuoi;
+        strcpy(a[i].hocLuc,a[i-1].hocLuc);
+        a[i].diemTrungBinh = a[i-1].diemTrungBinh;
+        strcpy(a[i].maLop,a[i-1].maLop);
+    }
+capNhatSinhVien(a[0]);
+}
+*/
