@@ -66,7 +66,18 @@ void nhapSinhVien(SV &sv){
 	printf("\n\tID: "); scanf("%d", &sv.id);
 	printf("\n\tTen: "); fflush(stdin); fgets(sv.ten, sizeof(sv.ten), stdin); xoaXuongDong(sv.ten);
 	printf("\n\tGioi tinh: "); fflush(stdin); fgets(sv.gioiTinh, sizeof(sv.gioiTinh), stdin); xoaXuongDong(sv.gioiTinh);
-	printf("\n\tNgay sinh:"); scanf("%d%d%d", &sv.ngaySinh.ngay, &sv.ngaySinh.thang, &sv.ngaySinh.nam);
+	do{
+		printf("\n\tNgay sinh: ");
+		scanf("%d",&sv.ngaySinh.ngay);
+	}while(sv.ngaySinh.ngay > 31||sv.ngaySinh.ngay <1 );
+	do{
+		printf("\n\tThang sinh: ");
+		scanf("%d",&sv.ngaySinh.thang);
+	}while(sv.ngaySinh.thang > 12|| sv.ngaySinh.thang<1);
+	do{
+		printf("\n\tNam sinh: ");
+		scanf("%d",&sv.ngaySinh.nam);
+	}while(sv.ngaySinh.nam > 2022 || sv.ngaySinh.nam<1);
 	printf("\n\tDiem Mon KTLT: "); scanf("%f", &sv.diemKTLT);
 	printf("\n\tDiem Mon GT: "); scanf("%f", &sv.diemGT);
 	printf("\n\tDiem Mon XSTK: "); scanf("%f", &sv.diemXSTK);
