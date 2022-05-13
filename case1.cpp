@@ -296,4 +296,28 @@ void ChenSV(SV a[],int &n)
     }
 capNhatSinhVien(a[0]);
 }
+void capNhatSVTheoID(SV ds[], int id, int n) {
+    int found = 0;
+    for(int i = 0; i < n; i++) {
+        if (ds[i].id == id) {
+            found = 1;
+            printf("Cap nhat thong tin sinh vien co id :%d",id);
+            capNhatSinhVien(ds[i]);
+            printf("Cap nhat sinh vien thanh cong");
+            break;
+        }
+    }
+     if (found == 0) {
+        printf("\n Sinh vien co ID = %d khong ton tai.", id);
+    }
+}
+void xuatFile(SV ds[], int n, char fileName[]){
+    FILE * fp;
+    fp = fopen (fileName,"w");
+    fprintf(fp,"%5s%20s%20s%6s\n", "ID", "Ten", "Gioi Tinh","Tuoi");
+    for(int i = 0;i < n;i++){
+        fprintf(fp,"%5d%20s%20s%6d\n", ds[i].id,ds[i].ten,ds[i].gioiTinh,ds[i].tuoi);
+    }
+    fclose (fp);
+}
 */
