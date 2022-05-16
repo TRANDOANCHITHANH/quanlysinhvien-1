@@ -112,7 +112,18 @@ void capNhatSinhVien(SV &sv){
 	xepLoai(sv);
 }
 
-/*void nhapDanhSachSinhVien(SV ds[], int &n){
+/*
+int check(SV ds[],int n){
+	for(int i=0;i<n;i++){
+		for (int j=i+1;j<n;j++){
+			if(ds[j].id==ds[i].id){
+				return 1;
+			}
+		}
+    }
+	return 0;
+}
+void nhapDanhSachSinhVien(SV ds[], int &n){
 	do{
 		printf("\n\tNhap Vao So Luong Sinh Vien:");
 		scanf("%d", &n);
